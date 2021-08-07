@@ -16,3 +16,6 @@ mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'pub
     require('tailwindcss'),
     require('autoprefixer'),
 ]);
+
+
+mix.js('resources/js/admin-lte.js', 'public/js').postCss('resources/css/admin-lte.css', 'public/css')
