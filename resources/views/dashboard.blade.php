@@ -1,11 +1,24 @@
-<x-admin-layout>
-    <x-slot name="contentHeader">
-        <h1>Dashboard</h1>
-    </x-slot>
+@extends('adminlte::page')
 
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Dashboard</h1>
+@stop
+
+@section('content')
     <div class="card">
         <div class="card-body">
-            You're logged in!
+            <p>You're logged in!.</p>
         </div>
     </div>
-</x-admin-layout>
+@stop
+
+@section('css')
+    {{-- <link rel="stylesheet" href="/css/admin_custom.css"> --}}
+@stop
+
+@section('js')
+    <script> console.log('Welcome to dashbboard!'); </script>
+@stop
+
