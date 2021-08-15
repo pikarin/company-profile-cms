@@ -18,4 +18,6 @@ mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'pub
 ]);
 
 
-mix.js('resources/js/admin-lte.js', 'public/js').postCss('resources/css/admin-lte.css', 'public/css')
+mix.js('resources/js/admin-lte.js', 'public/js').postCss('resources/css/admin-lte.css', 'public/css');
+
+mix.browserSync('localhost');

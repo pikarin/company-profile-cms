@@ -1,6 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
+    mode: 'jit',
     purge: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
@@ -9,9 +10,16 @@ module.exports = {
 
     theme: {
         extend: {
-            fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+            colors: {
+                "bookmark-purple": "#5267DF",
+                "bookmark-red": "#FA5959",
+                "bookmark-blue": "#242A45",
+                "bookmark-grey": "#9194A2",
+                "bookmark-white": "#f7f7f7",
             },
+        },
+        fontFamily: {
+            poppins: ["Poppins, sans-serif"],
         },
     },
 
