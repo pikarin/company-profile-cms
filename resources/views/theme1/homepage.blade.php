@@ -1,25 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-</head>
-<body class="antialiased font-poppins overflow-x-hidden">
+<x-theme1-layout bodyClass="overflow-x-hidden" title="Home">
     <header>
-        <x-container el="nav" class="flex items-center py-4 mt-4 sm:mt-12">
+        <x-theme1.container el="nav" class="flex items-center py-4 mt-4 sm:mt-12">
             <div class="py-1">
                 <img src="{{ asset('/imgs/logo-bookmark.svg') }}" alt="">
             </div>
@@ -35,12 +16,12 @@
                     </svg>
                 </button>
             </div>
-        </x-container>
+        </x-theme1.container>
     </header>
 
     {{-- Hero --}}
     <section class="relative">
-        <x-container class="flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
+        <x-theme1.container class="flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
             {{-- Content --}}
             <div class="flex flex-1 flex-col items-center lg:items-start">
                 <h2 class="text-bookmark-blue text-3xl md:text-4 lg:text-5xl text-center lg:text-left mb-6">
@@ -63,7 +44,7 @@
             <div class="flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0 z-10">
                 <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="{{ asset('/imgs/hero-bg.png') }}" alt="">
             </div>
-        </x-container>
+        </x-theme1.container>
 
         {{-- Rounded Rectangle --}}
         <div class="hidden absolute md:block overflow-hidden bg-bookmark-purple rounded-l-full h-80 w-2/4 top-32 right-0 lg:-bottom-28 lg:-right-36"></div>
@@ -82,7 +63,7 @@
 
         {{-- Feature #1 --}}
         <div class="relative mt-20 lg:mt-24">
-            <x-container class="flex flex-col lg:flex-row items-center justify-center gap-x-24">
+            <x-theme1.container class="flex flex-col lg:flex-row items-center justify-center gap-x-24">
                 <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
                     <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="{{ asset('/imgs/illustration-features-tab-1.png') }}" alt="">
                 </div>
@@ -97,13 +78,13 @@
                         More Info
                     </x-theme1.button>
                 </div>
-            </x-container>
+            </x-theme1.container>
             <div class="hidden absolute lg:block overflow-hidden bg-bookmark-purple rounded-r-full h-80 w-1/2 -bottom-24 -left-36"></div>
         </div>
 
         {{-- Feature #2 --}}
         <div class="relative mt-20 lg:mt-52">
-            <x-container class="flex flex-col lg:flex-row-reverse items-center justify-center gap-x-24">
+            <x-theme1.container class="flex flex-col lg:flex-row-reverse items-center justify-center gap-x-24">
                 <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
                     <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="{{ asset('/imgs/illustration-features-tab-2.png') }}" alt="">
                 </div>
@@ -117,13 +98,13 @@
                         More Info
                     </x-theme1.button>
                 </div>
-            </x-container>
+            </x-theme1.container>
             <div class="hidden absolute lg:block overflow-hidden bg-bookmark-purple rounded-l-full h-80 w-1/2 -bottom-24 -right-36"></div>
         </div>
 
         {{-- Feature #3 --}}
         <div class="relative mt-20 lg:mt-52">
-            <x-container class="flex flex-col lg:flex-row items-center justify-center gap-x-24">
+            <x-theme1.container class="flex flex-col lg:flex-row items-center justify-center gap-x-24">
                 <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
                     <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="{{ asset('/imgs/illustration-features-tab-3.png') }}" alt="">
                 </div>
@@ -138,7 +119,7 @@
                         More Info
                     </x-theme1.button>
                 </div>
-            </x-container>
+            </x-theme1.container>
             <div class="hidden absolute lg:block overflow-hidden bg-bookmark-purple rounded-r-full h-80 w-1/2 -bottom-24 -left-36"></div>
         </div>
     </section>
@@ -155,7 +136,7 @@
         </div>
 
         {{-- Cards --}}
-        <x-container class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-screen-lg mt-16">
+        <x-theme1.container class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-screen-lg mt-16">
             {{-- Card 1 --}}
             <div class="flex flex-col rounded-md shadow-md lg:mb-16">
                 <div class="p-6 flex flex-col items-center">
@@ -200,12 +181,12 @@
                     </x-theme1.button>
                 </div>
             </div>
-        </x-container>
+        </x-theme1.container>
     </section>
 
     {{-- FAQ --}}
     <section class="bg-bookmark-white py-20">
-        <x-container>
+        <x-theme1.container>
             {{-- Heading --}}
             <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
                 <h1 class="text-3xl text-center text-bookmark-blue">Frequently Asked Questions</h1>
@@ -249,12 +230,12 @@
                     More Info
                 </x-theme1.button>
             </div>
-        </x-container>
+        </x-theme1.container>
     </section>
 
     {{-- Contact Us --}}
     <section class="bg-bookmark-purple text-white py-20">
-        <x-container>
+        <x-theme1.container>
             <div class="sm:w-3/4 lg:w-2/4 mx-auto">
                 <p class="font-light uppercase text-center mb-8">35,000+ Already Joined</p>
                 <h1 class="text-3xl text-center">Stay up-to-date with what we're doing</h1>
@@ -265,12 +246,12 @@
                     </x-theme1.button>
                 </div>
             </div>
-        </x-container>
+        </x-theme1.container>
     </section>
 
     {{-- Footer --}}
     <footer class="bg-bookmark-blue py-8">
-        <x-container class="flex flex-col md:flex-row items-center">
+        <x-theme1.container class="flex flex-col md:flex-row items-center">
             <div class="flex flex-1 flex-wrap items-center justify-center md:justify-start gap-12">
                 <img src="{{ asset('/imgs/logo-bookmark-white.png') }}" alt="">
                 <ul class="flex text-white uppercase gap-12 text-xs">
@@ -287,7 +268,6 @@
                     <svg aria-hidden="true" data-prefix="fab" data-icon="facebook-square" class="text-white w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48A48 48 0 000 80v352a48 48 0 0048 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0048-48V80a48 48 0 00-48-48z"/></svg>
                 </li>
             </ul>
-        </x-container>
+        </x-theme1.container>
     </footer>
-</body>
-</html>
+</x-theme1-layout>
