@@ -13,10 +13,10 @@ class MenuLinks extends Component
      * @return void
      */
     public function __construct(
+        protected MenuService $menuService,
         public string $wrapperClass = '',
         public string $itemClass = '',
         public string $itemActiveClass = '',
-        protected MenuService $menuService,
     ) {
         //
     }

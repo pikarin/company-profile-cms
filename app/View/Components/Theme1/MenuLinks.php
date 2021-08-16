@@ -2,6 +2,7 @@
 
 namespace App\View\Components\Theme1;
 
+use App\Services\MenuService;
 use Illuminate\View\Component;
 
 class MenuLinks extends Component
@@ -14,21 +15,16 @@ class MenuLinks extends Component
      * @return void
      */
     public function __construct(
+        protected MenuService $menuService,
         public string $wrapperClass = '',
         public string $itemClass = '',
-        )
-    {
+    ) {
         //
     }
 
     public function getLinks()
     {
-        // TODO: get from database
-        if (!$this->links) {
-            $this->links = ['Home' => '/', 'About' => '/about', 'Contact' => '/contact'];
-        }
-
-        return $this->links;
+        return $this->menuService->getActiveLinks();
     }
 
     /**
