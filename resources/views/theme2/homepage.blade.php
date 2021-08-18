@@ -8,6 +8,10 @@
             <x-theme2.summary class="mt-12" />
 
             <x-theme2.partners class="mt-12" />
+
+            <x-theme2.highlights class="mt-12" />
+
+            <x-theme2.call-to-action class="mt-12" />
         </x-theme2.container>
     </main>
 
