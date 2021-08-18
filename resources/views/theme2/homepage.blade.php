@@ -6,6 +6,8 @@
 
         <x-theme2.container>
             <x-theme2.summary class="mt-12" />
+
+            <x-theme2.partners class="mt-12" />
         </x-theme2.container>
     </main>
 
