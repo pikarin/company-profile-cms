@@ -1,8 +1,8 @@
 <x-theme2-layout title="Home">
-    <x-theme2.header />
+    <x-theme2.header class="border-b border-gray-50"/>
 
     <main>
-        Main content here
+        <x-theme2.hero />
     </main>
 
     <footer>

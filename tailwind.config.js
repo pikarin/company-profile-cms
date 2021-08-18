@@ -16,6 +16,9 @@ module.exports = {
                 "bookmark-blue": "#242A45",
                 "bookmark-grey": "#9194A2",
                 "bookmark-white": "#f7f7f7",
+                "primary": "#5267DF",
+                "grey": "#F6F9FC",
+                // "accent": "",
             },
         },
         fontFamily: {
