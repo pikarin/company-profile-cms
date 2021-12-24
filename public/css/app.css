@@ -1924,6 +1924,10 @@ select {
 		right: -9rem;
 	}
 
+	.lg\:col-start-1 {
+		grid-column-start: 1;
+	}
+
 	.lg\:my-8 {
 		margin-top: 2rem;
 		margin-bottom: 2rem;
@@ -1957,6 +1961,18 @@ select {
 		margin-top: 13rem;
 	}
 
+	.lg\:block {
+		display: block;
+	}
+
+	.lg\:flex {
+		display: flex;
+	}
+
+	.lg\:hidden {
+		display: none;
+	}
+
 	.lg\:w-2\/4 {
 		width: 50%;
 	}
@@ -1973,6 +1989,10 @@ select {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 
+	.lg\:grid-cols-2 {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
 	.lg\:flex-row {
 		flex-direction: row;
 	}
@@ -1985,9 +2005,26 @@ select {
 		align-items: flex-start;
 	}
 
+	.lg\:items-center {
+		align-items: center;
+	}
+
+	.lg\:justify-between {
+		justify-content: space-between;
+	}
+
+	.lg\:justify-items-start {
+		justify-items: start;
+	}
+
 	.lg\:px-8 {
 		padding-left: 2rem;
 		padding-right: 2rem;
+	}
+
+	.lg\:px-0 {
+		padding-left: 0px;
+		padding-right: 0px;
 	}
 
 	.lg\:text-left {
