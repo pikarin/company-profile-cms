@@ -1,14 +1,12 @@
 <?php
 
-namespace App\View\Components\Theme1;
+namespace App\View\Components\Theme2;
 
 use App\Services\MenuService;
 use Illuminate\View\Component;
 
 class MenuLinks extends Component
 {
-    protected $links;
-
     /**
      * Create a new component instance.
      *
@@ -18,6 +16,7 @@ class MenuLinks extends Component
         protected MenuService $menuService,
         public string $wrapperClass = '',
         public string $itemClass = '',
+        public string $itemActiveClass = '',
     ) {
         //
     }
@@ -34,6 +33,6 @@ class MenuLinks extends Component
      */
     public function render()
     {
-        return view('components.theme1.menu-links');
+        return view('components.theme2.menu-links');
     }
 }

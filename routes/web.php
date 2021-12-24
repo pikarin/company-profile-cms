@@ -14,8 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('theme1.homepage');
+    return view('theme2.homepage');
 });
+
+Route::view('/theme1', 'theme1.homepage');
+Route::view('/theme2', 'theme2.homepage');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
