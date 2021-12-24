@@ -15,7 +15,5 @@
         </x-theme2.container>
     </main>
 
-    <footer>
-        Footer Here
-    </footer>
+    <x-theme2.footer class="mt-24" />
 </x-theme2-layout>
