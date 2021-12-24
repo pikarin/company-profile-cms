@@ -2064,6 +2064,14 @@ select {
 		margin-top: 13rem;
 	}
 
+	.lg\:mt-0 {
+		margin-top: 0px;
+	}
+
+	.lg\:ml-10 {
+		margin-left: 2.5rem;
+	}
+
 	.lg\:block {
 		display: block;
 	}
