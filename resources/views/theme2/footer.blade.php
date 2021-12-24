@@ -1,12 +1,12 @@
 <footer {{ $attributes->class(['bg-grey']) }}>
-    <x-theme2.container class="pt-5 pb-14 space-y-8">
+    <x-theme2.container class="pt-5 lg:pt-12 pb-14 space-y-8 lg:space-y-0 lg:flex justify-between">
         <div>
             <img src="{{ asset('/imgs/the-logo.png') }}" alt="Company Logo"
                 class="w-40 mx-auto"
             >
         </div>
 
-        <div class="grid grid-cols-2 gap-6 px-4">
+        <div class="grid grid-cols-2 lg:flex lg:flex-1 gap-6 px-4 lg:px-0 lg:mx-24 lg:justify-around">
             <x-theme2.footer-link-list heading="Company">
                 <a href="#">About</a>
                 <a href="#">Contact</a>
@@ -24,7 +24,7 @@
             </x-theme2.footer-link-list>
         </div>
 
-        <p class="text-center text-gray-400">
+        <p class="text-center text-gray-400 lg:grid lg:place-content-center">
             {{ now()->format('Y') }} Company
         </p>
     </x-theme2.container>

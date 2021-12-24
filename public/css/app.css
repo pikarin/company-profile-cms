@@ -1059,6 +1059,9 @@ select {
 .max-w-7xl {
 	max-width: 80rem;
 }
+.max-w-prose {
+	max-width: 65ch;
+}
 .flex-1 {
 	flex: 1 1 0%;
 }
@@ -1419,6 +1422,9 @@ select {
 }
 .pb-14 {
 	padding-bottom: 3.5rem;
+}
+.pt-10 {
+	padding-top: 2.5rem;
 }
 .text-center {
 	text-align: center;
@@ -1916,6 +1922,45 @@ select {
 }
 @media (min-width: 1024px) {
 
+	.lg\:container {
+		width: 100%;
+	}
+
+	@media (min-width: 640px) {
+
+		.lg\:container {
+			max-width: 640px;
+		}
+	}
+
+	@media (min-width: 768px) {
+
+		.lg\:container {
+			max-width: 768px;
+		}
+	}
+
+	@media (min-width: 1024px) {
+
+		.lg\:container {
+			max-width: 1024px;
+		}
+	}
+
+	@media (min-width: 1280px) {
+
+		.lg\:container {
+			max-width: 1280px;
+		}
+	}
+
+	@media (min-width: 1536px) {
+
+		.lg\:container {
+			max-width: 1536px;
+		}
+	}
+
 	.lg\:-bottom-28 {
 		bottom: -7rem;
 	}
@@ -1931,6 +1976,21 @@ select {
 	.lg\:my-8 {
 		margin-top: 2rem;
 		margin-bottom: 2rem;
+	}
+
+	.lg\:mx-8 {
+		margin-left: 2rem;
+		margin-right: 2rem;
+	}
+
+	.lg\:mx-12 {
+		margin-left: 3rem;
+		margin-right: 3rem;
+	}
+
+	.lg\:mx-24 {
+		margin-left: 6rem;
+		margin-right: 6rem;
 	}
 
 	.lg\:mt-28 {
@@ -1969,6 +2029,10 @@ select {
 		display: flex;
 	}
 
+	.lg\:grid {
+		display: grid;
+	}
+
 	.lg\:hidden {
 		display: none;
 	}
@@ -1985,6 +2049,14 @@ select {
 		width: 100%;
 	}
 
+	.lg\:flex-1 {
+		flex: 1 1 0%;
+	}
+
+	.lg\:grid-flow-col {
+		grid-auto-flow: column;
+	}
+
 	.lg\:grid-cols-3 {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
@@ -1993,12 +2065,28 @@ select {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
+	.lg\:grid-cols-5 {
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+	}
+
 	.lg\:flex-row {
 		flex-direction: row;
 	}
 
 	.lg\:flex-row-reverse {
 		flex-direction: row-reverse;
+	}
+
+	.lg\:flex-col-reverse {
+		flex-direction: column-reverse;
+	}
+
+	.lg\:place-content-center {
+		place-content: center;
+	}
+
+	.lg\:place-content-end {
+		place-content: end;
 	}
 
 	.lg\:items-start {
@@ -2013,8 +2101,26 @@ select {
 		justify-content: space-between;
 	}
 
+	.lg\:justify-around {
+		justify-content: space-around;
+	}
+
 	.lg\:justify-items-start {
 		justify-items: start;
+	}
+
+	.lg\:gap-4 {
+		gap: 1rem;
+	}
+
+	.lg\:gap-12 {
+		gap: 3rem;
+	}
+
+	.lg\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+		--tw-space-y-reverse: 0;
+		margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+		margin-bottom: calc(0px * var(--tw-space-y-reverse));
 	}
 
 	.lg\:px-8 {
@@ -2025,6 +2131,33 @@ select {
 	.lg\:px-0 {
 		padding-left: 0px;
 		padding-right: 0px;
+	}
+
+	.lg\:px-3 {
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
+	}
+
+	.lg\:px-4 {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	.lg\:py-0 {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+
+	.lg\:pt-8 {
+		padding-top: 2rem;
+	}
+
+	.lg\:pt-10 {
+		padding-top: 2.5rem;
+	}
+
+	.lg\:pt-12 {
+		padding-top: 3rem;
 	}
 
 	.lg\:text-left {
