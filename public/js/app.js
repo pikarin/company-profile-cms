@@ -20536,7 +20536,7 @@ __webpack_require__.r(__webpack_exports__);
     expose();
     var page = (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.usePage)();
     var errors = (0,vue__WEBPACK_IMPORTED_MODULE_1__.computed)(function () {
-      return page.props.errors;
+      return page.props.value.errors;
     });
     var hasErrors = (0,vue__WEBPACK_IMPORTED_MODULE_1__.computed)(function () {
       return Object.keys(errors.value).length > 0;
@@ -20803,7 +20803,7 @@ var __default__ = {
     var expose = _ref.expose;
     expose();
     var form = (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_6__.useForm)({
-      email: '',
+      emaill: '',
       password: '',
       remember: false
     });
@@ -21917,9 +21917,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     value: "Email"
   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["BreezeInput"], {
     id: "email",
-    modelValue: $setup.form.email,
+    modelValue: $setup.form.emaill,
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
-      return $setup.form.email = $event;
+      return $setup.form.emaill = $event;
     }),
     type: "email",
     "class": "mt-1 block w-full",

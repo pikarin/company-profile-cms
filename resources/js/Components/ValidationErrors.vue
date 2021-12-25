@@ -4,7 +4,7 @@ import { computed } from 'vue'
 
 const page = usePage()
 
-const errors = computed(() => page.props.errors)
+const errors = computed(() => page.props.value.errors)
 
 const hasErrors = computed(() => Object.keys(errors.value).length > 0)
 </script>
