@@ -1,6 +1,6 @@
-import { AxiosInstance } from "axios";
-import { LoDashStatic } from "lodash";
-import { Config, Router, QueryParams } from "ziggy-js";
+import { AxiosInstance } from 'axios'
+import { LoDashStatic } from 'lodash'
+import { Config, Router, QueryParams } from 'ziggy-js'
 
 declare global {
     interface Window {

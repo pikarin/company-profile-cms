@@ -8,7 +8,7 @@
         "hot": "mix watch --hot",
         "prod": "npm run production",
         "production": "mix --production",
-        "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix resources/js"
+        "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore --fix resources/js"
     },
     "devDependencies": {
         "@inertiajs/inertia": "^0.10.0",
