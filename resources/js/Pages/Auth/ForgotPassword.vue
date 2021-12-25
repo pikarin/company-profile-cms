@@ -1,3 +1,30 @@
+<script setup>
+import BreezeButton from '@/Components/AppButton.vue'
+import BreezeGuestLayout from '@/Layouts/Guest.vue'
+import BreezeInput from '@/Components/AppInput.vue'
+import BreezeLabel from '@/Components/AppLabel.vue'
+import BreezeValidationErrors from '@/Components/ValidationErrors.vue'
+import { Head, useForm } from '@inertiajs/inertia-vue3'
+
+defineProps({
+    status: String,
+})
+
+const form = useForm({
+    email: '',
+})
+
+const submit = () => {
+    form.post(route('password.email'))
+}
+</script>
+
+<script>
+export default {
+    layout: BreezeGuestLayout,
+}
+</script>
+
 <template>
 <Head title="Forgot Password" />
 
@@ -24,42 +51,3 @@
     </div>
 </form>
 </template>
-
-<script>
-import BreezeButton from '@/Components/Button.vue'
-import BreezeGuestLayout from '@/Layouts/Guest.vue'
-import BreezeInput from '@/Components/Input.vue'
-import BreezeLabel from '@/Components/Label.vue'
-import BreezeValidationErrors from '@/Components/ValidationErrors.vue'
-import { Head } from '@inertiajs/inertia-vue3'
-
-export default {
-
-    components: {
-        BreezeButton,
-        BreezeInput,
-        BreezeLabel,
-        BreezeValidationErrors,
-        Head,
-    },
-    layout: BreezeGuestLayout,
-
-    props: {
-        status: String,
-    },
-
-    data() {
-        return {
-            form: this.$inertia.form({
-                email: ''
-            })
-        }
-    },
-
-    methods: {
-        submit() {
-            this.form.post(this.route('password.email'))
-        }
-    }
-}
-</script>

@@ -1,3 +1,28 @@
+<script setup>
+import BreezeButton from '@/Components/AppButton.vue'
+import BreezeGuestLayout from '@/Layouts/Guest.vue'
+import { Head, Link, useForm } from '@inertiajs/inertia-vue3'
+import { computed } from 'vue'
+
+const props = defineProps({
+    status: String,
+})
+
+const verificationLinkSent = computed(() => props.status === 'verification-link-sent')
+
+const form = useForm()
+
+const submit = () => {
+    form.post(route('verification.send'))
+}
+</script>
+
+<script>
+export default {
+    layout: BreezeGuestLayout,
+}
+</script>
+
 <template>
 <Head title="Email Verification" />
 
@@ -19,41 +44,3 @@
     </div>
 </form>
 </template>
-
-<script>
-import BreezeButton from '@/Components/Button.vue'
-import BreezeGuestLayout from '@/Layouts/Guest.vue'
-import { Head, Link } from '@inertiajs/inertia-vue3'
-
-export default {
-
-    components: {
-        BreezeButton,
-        Head,
-        Link,
-    },
-    layout: BreezeGuestLayout,
-
-    props: {
-        status: String,
-    },
-
-    data() {
-        return {
-            form: this.$inertia.form()
-        }
-    },
-
-    computed: {
-        verificationLinkSent() {
-            return this.status === 'verification-link-sent'
-        }
-    },
-
-    methods: {
-        submit() {
-            this.form.post(this.route('verification.send'))
-        },
-    }
-}
-</script>
