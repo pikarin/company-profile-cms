@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 import BreezeButton from '@/Components/AppButton.vue'
 import BreezeGuestLayout from '@/Layouts/Guest.vue'
 import { Head, Link, useForm } from '@inertiajs/inertia-vue3'
@@ -10,14 +10,14 @@ const props = defineProps({
 
 const verificationLinkSent = computed(() => props.status === 'verification-link-sent')
 
-const form = useForm()
+const form = useForm({})
 
 const submit = () => {
     form.post(route('verification.send'))
 }
 </script>
 
-<script>
+<script lang="ts">
 export default {
     layout: BreezeGuestLayout,
 }

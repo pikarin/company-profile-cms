@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 import BreezeButton from '@/Components/AppButton.vue'
 import BreezeGuestLayout from '@/Layouts/Guest.vue'
 import BreezeInput from '@/Components/AppInput.vue'
@@ -21,7 +21,7 @@ const submit = () => {
 }
 </script>
 
-<script>
+<script lang="ts">
 export default {
     layout: BreezeGuestLayout,
 }

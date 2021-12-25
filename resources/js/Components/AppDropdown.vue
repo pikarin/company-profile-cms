@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 import { onMounted, onUnmounted, ref, computed } from 'vue'
 
 const props = defineProps({
@@ -23,9 +23,9 @@ const widthClass = computed(() => {
 })
 
 const alignmentClasses = computed(() => {
-    if (this.align === 'left') {
+    if (props.align === 'left') {
         return 'origin-top-left left-0'
-    } else if (this.align === 'right') {
+    } else if (props.align === 'right') {
         return 'origin-top-right right-0'
     } else {
         return 'origin-top'

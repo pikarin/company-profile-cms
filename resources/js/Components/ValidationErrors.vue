@@ -1,8 +1,12 @@
-<script setup>
+<script lang="ts" setup>
 import { usePage } from '@inertiajs/inertia-vue3'
 import { computed } from 'vue'
 
-const page = usePage()
+const page = usePage<{
+    errors: {
+        [key: string]: string
+    }
+}>()
 
 const errors = computed(() => page.props.value.errors)
 

@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 import BreezeApplicationLogo from '@/Components/ApplicationLogo.vue'
 import { Link } from '@inertiajs/inertia-vue3'
 </script>
