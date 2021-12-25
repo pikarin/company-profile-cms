@@ -1,0 +1,43 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "strict": false,
+        "jsx": "preserve",
+        "importHelpers": true,
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "sourceMap": true,
+        "baseUrl": ".",
+        "types": [
+            "node"
+        ],
+        "paths": {
+            "@/*": [
+                "resources/js/*"
+            ]
+        },
+        "lib": [
+            "esnext",
+            "dom",
+            "dom.Iterable",
+            "scripthost"
+        ]
+    },
+    "include": [
+        "resources/js/types.d.ts",
+        "resources/js/shims-vue.d.ts",
+        "resources/js/shims-window.d.ts",
+        "resources/js/Pages/**/*.vue",
+        "resources/js/**/*",
+        "resources/js/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "public"
+    ]
+}
