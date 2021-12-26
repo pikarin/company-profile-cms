@@ -19,7 +19,10 @@
         "paths": {
             "@/*": [
                 "resources/js/*"
-            ]
+            ],
+            "@admin/*": [
+                "Admin/Resources/ts/*"
+            ],
         },
         "lib": [
             "esnext",
@@ -29,12 +32,13 @@
         ]
     },
     "include": [
-        "resources/js/types.d.ts",
-        "resources/js/shims-vue.d.ts",
-        "resources/js/shims-window.d.ts",
-        "resources/js/Pages/**/*.vue",
-        "resources/js/**/*",
-        "resources/js/**/*.ts"
+        "Admin/Resources/ts/types.d.ts",
+        "Admin/Resources/ts/shims-vue.d.ts",
+        "Admin/Resources/ts/shims-window.d.ts",
+        "Admin/Resources/ts/Pages/**/*.vue",
+        "Admin/Resources/ts/**/*",
+        "Admin/Resources/ts/**/*.ts",
+        "resources/js/**/*.ts",
     ],
     "exclude": [
         "node_modules",

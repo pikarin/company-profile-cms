@@ -21,9 +21,3 @@ Route::get('/', function () {
 
 Route::view('/theme1', 'theme1.homepage');
 Route::view('/theme2', 'theme2.homepage');
-
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-require __DIR__.'/auth.php';
