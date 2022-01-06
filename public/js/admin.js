@@ -20861,7 +20861,7 @@ var __default__ = {
     var expose = _ref.expose;
     expose();
     var form = (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_7__.useForm)({
-      emaill: '',
+      email: '',
       password: '',
       remember: false
     });
@@ -21930,9 +21930,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     value: "Email"
   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["BreezeInput"], {
     id: "email",
-    modelValue: $setup.form.emaill,
+    modelValue: $setup.form.email,
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
-      return $setup.form.emaill = $event;
+      return $setup.form.email = $event;
     }),
     type: "email",
     "class": "mt-1 block w-full",

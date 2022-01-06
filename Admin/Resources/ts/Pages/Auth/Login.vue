@@ -13,7 +13,7 @@ defineProps({
 })
 
 const form = useForm({
-    emaill: '',
+    email: '',
     password: '',
     remember: false,
 })
@@ -43,7 +43,7 @@ export default {
 <form @submit.prevent="submit">
     <div>
         <BreezeLabel for="email" value="Email" />
-        <BreezeInput id="email" v-model="form.emaill" type="email" class="mt-1 block w-full" required autofocus autocomplete="username" />
+        <BreezeInput id="email" v-model="form.email" type="email" class="mt-1 block w-full" required autofocus autocomplete="username" />
     </div>
 
     <div class="mt-4">
