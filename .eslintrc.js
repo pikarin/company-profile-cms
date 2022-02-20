@@ -20,7 +20,7 @@ module.exports = {
         'vue/no-v-html': 'off',
         'vue/require-default-prop': 'off',
         'vue/html-indent': ['error', 4],
-        'prettier/prettier': 'warn',
+        'prettier/prettier': 'error',
     },
     globals: {
         route: 'readonly',
